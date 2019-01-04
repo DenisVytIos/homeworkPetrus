@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SgH-gz-syz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Cmz-ex-WbN">
+                                <rect key="frame" x="169" y="325" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvM-Ue-cqg">
+                                <rect key="frame" x="16" y="20" width="102" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel loading">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelLoadingAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f8C-qj-4FB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Cmz-ex-WbN" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Mhr-l4-hAe"/>
+                            <constraint firstItem="SgH-gz-syz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Nh3-HN-8q0"/>
+                            <constraint firstItem="SgH-gz-syz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ahq-QY-Pw0"/>
+                            <constraint firstItem="Cmz-ex-WbN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="c1P-VU-ORh"/>
+                            <constraint firstItem="SgH-gz-syz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jAR-jU-4uc"/>
+                            <constraint firstItem="SgH-gz-syz" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="sBW-wD-e32"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="SgH-gz-syz" id="7nQ-29-0Vj"/>
+                        <outlet property="loadingIndicator" destination="Cmz-ex-WbN" id="DrQ-Ca-LiS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
